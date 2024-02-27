@@ -10,3 +10,6 @@ A base project to start initial projects, with Dockerfile and examples of integr
 
 # Links
 http://localhost:8080/swagger-ui/index.html
+
+# Steps to run
+ - mvn clean install
