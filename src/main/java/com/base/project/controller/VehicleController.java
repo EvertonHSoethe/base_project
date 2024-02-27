@@ -26,7 +26,7 @@ public class VehicleController {
         return ResponseEntity.ok(vehicleService.create(vehicleCreateDTO));
     }
 
-    @GetMapping
+    @GetMapping("/list")
     public ResponseEntity<List<VehicleResponseDTO>> getVehicles() {
         return ResponseEntity.ok(vehicleService.getVehicles());
     }
