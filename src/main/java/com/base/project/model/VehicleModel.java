@@ -16,7 +16,7 @@ import java.time.LocalDateTime;
 @ToString
 @EqualsAndHashCode
 @Data
-public class Vehicle {
+public class VehicleModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

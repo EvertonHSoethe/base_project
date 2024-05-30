@@ -1,12 +1,12 @@
 package com.base.project.repository;
 
-import com.base.project.model.Vehicle;
+import com.base.project.model.VehicleModel;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;
 
-public interface VehicleRepository extends JpaRepository<Vehicle, Long> {
+public interface VehicleRepository extends JpaRepository<VehicleModel, Long> {
 
-    Optional<Vehicle> findByName(String name);
-    Optional<Vehicle> findByModel(String model);
+    Optional<VehicleModel> findByName(String name);
+    Optional<VehicleModel> findByModel(String model);
 }
