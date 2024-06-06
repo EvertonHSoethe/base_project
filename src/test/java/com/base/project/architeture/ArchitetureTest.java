@@ -2,6 +2,7 @@ package com.base.project.architeture;
 
 import com.tngtech.archunit.core.domain.JavaClasses;
 import com.tngtech.archunit.core.importer.ClassFileImporter;
+import com.tngtech.archunit.core.importer.ImportOption;
 import com.tngtech.archunit.lang.ArchRule;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -15,7 +16,7 @@ import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.fields;
 @Tag(value = "  architecture")
 public class ArchitetureTest {
 
-    private final JavaClasses importedClasses = new ClassFileImporter().importPackages("com.base.project");
+    private final JavaClasses importedClasses = new ClassFileImporter().withImportOption(new ImportOption.DoNotIncludeTests()).importPackages("com.base.project");
     @Test
     void noClassesShouldUseFieldInjection() {
         ArchRule rule = fields()
